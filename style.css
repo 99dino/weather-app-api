@@ -17,6 +17,36 @@ body {
   background-size: contain;
 }
 
+.card {
+  background-color: #ffffff;
+  border-radius: 50px;
+  color: #6f707d;
+  font-family: "Poppins", sans-serif;
+}
+
+#temperature {
+  font-size: 75px;
+  color: #2b304d;
+}
+
+.temp {
+  place-items: center;
+}
+
+.temp-details > p > span,
+.grey {
+  color: #a3acc1;
+  font-size: 15px;
+}
+
+.fa {
+  color: #a5a5b1;
+}
+
+*:focus {
+  outline: none;
+}
+
 /* Search */
 
 body {
