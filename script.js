@@ -12,7 +12,7 @@ let today = new Date();
 time.innerHTML =
   today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
 
-submit.addEventListener("click", function () {
+const submit_btn = function () {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=metric&appid=bac56e07d03dbc48060bdd2e03428a33`
   )
@@ -26,4 +26,12 @@ submit.addEventListener("click", function () {
     })
 
     .catch((err) => alert("Error: Please insert correct city name")); //Catch error
+};
+
+submit.addEventListener("click", submit_btn);
+
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Enter") {
+    submit_btn();
+  }
 });
